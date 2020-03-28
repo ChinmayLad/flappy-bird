@@ -41,7 +41,7 @@ def main():
 		bird.move()
 
 
-		score_label = STAT_FONT.render("Score: " + str(score),1,(255,255,255))
+		score_label = STAT_FONT.render("Score: {}".format(score), 1, (255,255,255))
 		WIN.blit(score_label, (WIN_WIDTH - score_label.get_width() - 15, 10))
 
 		rem = []
@@ -66,6 +66,10 @@ def main():
 
 		for p in rem:
 			pipes.remove(p)
+
+		if bird.y > WIN_HEIGHT:
+			run = False
+			game_over()
 
 		pygame.display.update()
 

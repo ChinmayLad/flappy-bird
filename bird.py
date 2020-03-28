@@ -1,7 +1,7 @@
 from setup import *
 import pygame as pg
 
-VELOCITY_UP = -12
+VELOCITY_UP = -11
 class Bird:
 
 	def __init__(self, x, y):
@@ -21,11 +21,11 @@ class Bird:
 		self.tick += 1
 		disp = self.vel*self.tick + 0.5*GRAVITY*(self.tick**2)
 
-		if disp >= 16:
-			disp = (disp/abs(disp)) * 16
+		if disp >= 17:
+			disp = (disp/abs(disp)) * 17
 
-		# if disp < 0:
-		# 	disp -= 2
+		if disp < 0:
+			disp -= 2
 			
 		self.y += disp
 

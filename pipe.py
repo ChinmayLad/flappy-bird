@@ -14,7 +14,7 @@ class Pipe:
 
 		self.x = x
 
-		self.bottom = random.randint(250, WIN_HEIGHT-250)
+		self.bottom = random.randint(250, WIN_HEIGHT-300)
 		self.top = self.bottom-self.GAP-self.HEIGHT
 
 
