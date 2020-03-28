@@ -10,6 +10,8 @@ class Pipe:
 		self.HEIGHT = self.BOTTOM.get_height()
 		self.GAP = 200
 
+		self.passed = False
+
 		self.x = x
 
 		self.bottom = random.randint(250, WIN_HEIGHT-250)
@@ -23,9 +25,6 @@ class Pipe:
 
 	def move(self):
 		self.x -= H_VEL
-
-	def crossed(self, bird):
-		return bird.x > self.x+self.WIDTH
 
 	def offscreen(self):
 		return self.x+self.WIDTH < 0
