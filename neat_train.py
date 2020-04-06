@@ -103,6 +103,7 @@ def eval_genome(genomes, config):
     if score > 20:
       break
       
+    # pygame.image.save(WIN, "images/flappy-gen{}-counter{}.png".format(gen, pygame.time.get_ticks()))
     pygame.display.update()
 
 
