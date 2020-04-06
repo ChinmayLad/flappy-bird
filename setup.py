@@ -8,8 +8,8 @@ pygame.font.init()  # init font
 WIN_WIDTH = 600
 WIN_HEIGHT = 800
 FLOOR = 700
-STAT_FONT = pygame.font.SysFont("comicsans", 50)
-END_FONT = pygame.font.SysFont("comicsans", 70)
+STAT_FONT = pygame.font.SysFont("Eight\-Bit Madness", 50)
+END_FONT = pygame.font.SysFont("Eight\-Bit Madness", 70)
 DRAW_LINES = False
 GRAVITY = 3
 H_VEL = 7

@@ -6,7 +6,7 @@ VELOCITY_UP = -10.5
 MAX_ROTATION = 20
 ROT_VEL = 10
 class Bird:
-  def __init__(self, x, y):
+  def __init__(self, x, y, gene=None, net=None):
     self.x = x
     self.y = y
     self.vel = 0
@@ -16,7 +16,8 @@ class Bird:
     self.height = self.y
     self.IMGS = GFX['bird']
     self.img = self.IMGS[0]
-
+    self.gene = gene
+    self.net = net
 
   def draw(self, win):
     self.img_count += 1

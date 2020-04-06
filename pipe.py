@@ -42,3 +42,8 @@ class Pipe:
 
     return top_overlap or bottom_overlap
 
+  def get_top(self):
+    return self.top + self.HEIGHT
+
+  def get_bottom(self):
+    return self.bottom
