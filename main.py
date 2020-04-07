@@ -5,11 +5,12 @@ from base import Base
 from pipe import Pipe
 pygame.font.init()  # init font
 
-
+max_score = 0
 def game_over():
   print("GAME OVER LOL!!")
 
 def main():
+  global max_score
 
   bird = Bird(200, 350)
   base = Base()
@@ -40,6 +41,11 @@ def main():
     base.move()
     bird.move()
 
+    if max_score < score:
+      max_score = score
+
+    max_score_label = STAT_FONT.render("Max Score: {}".format(max_score), 1, (255,255,255))
+    WIN.blit(max_score_label, (15, 10))
 
     score_label = STAT_FONT.render("Score: {}".format(score), 1, (255,255,255))
     WIN.blit(score_label, (WIN_WIDTH - score_label.get_width() - 15, 10))
